@@ -1,21 +1,22 @@
+package org.example;
+
 import java.util.Scanner;
 
 class QUESTOES {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o salário do cliente: ");
-        double salario = scanner.nextDouble();
+        System.out.print("Digite o valor investido: R$ ");
+        double valorInvestido = scanner.nextDouble();
 
-        System.out.print("Digite o valor da parcela desejada: ");
-        double parcela = scanner.nextDouble();
-
-        double limiteParcela = salario * 0.30;
-
-        if (parcela <= limiteParcela) {
-            System.out.println("Empréstimo aprovado!");
+        if (valorInvestido <= 10000) {
+            System.out.println("Categoria: Bronze");
+        } else if (valorInvestido <= 50000) {
+            System.out.println("Categoria: Prata");
+        } else if (valorInvestido <= 100000) {
+            System.out.println("Categoria: Ouro");
         } else {
-            System.out.println("Empréstimo recusado.");
+            System.out.println("Categoria: Platinum");
         }
 
         scanner.close();
