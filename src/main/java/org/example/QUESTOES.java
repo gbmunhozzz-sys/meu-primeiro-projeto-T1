@@ -6,17 +6,16 @@ class QUESTOES {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o valor investido: R$ ");
-        double valorInvestido = scanner.nextDouble();
+        System.out.print("Digite a renda mensal do cliente: R$ ");
+        double renda = scanner.nextDouble();
 
-        if (valorInvestido <= 10000) {
-            System.out.println("Categoria: Bronze");
-        } else if (valorInvestido <= 50000) {
-            System.out.println("Categoria: Prata");
-        } else if (valorInvestido <= 100000) {
-            System.out.println("Categoria: Ouro");
+        System.out.print("Digite o score de crédito do cliente: ");
+        int score = scanner.nextInt();
+
+        if (renda > 8000 && score > 700) {
+            System.out.println("Cartão Premium aprovado!");
         } else {
-            System.out.println("Categoria: Platinum");
+            System.out.println("Cartão Premium recusado.");
         }
 
         scanner.close();
