@@ -6,13 +6,13 @@ class QUESTOES {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o valor da transação: R$ ");
-        double valorTransacao = scanner.nextDouble();
+        System.out.print("Digite o saldo médio mensal do cliente: R$ ");
+        double saldoMedio = scanner.nextDouble();
 
-        if (valorTransacao > 10000) {
-            System.out.println("Transação suspeita! Sinalizada para análise.");
+        if (saldoMedio > 5000) {
+            System.out.println("Isenção de tarifa bancária concedida!");
         } else {
-            System.out.println("Transação normal. Nenhuma análise necessária.");
+            System.out.println("Tarifa bancária mantida.");
         }
 
         scanner.close();
