@@ -6,16 +6,13 @@ class QUESTOES {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite a renda mensal do cliente: R$ ");
-        double renda = scanner.nextDouble();
+        System.out.print("Digite o valor da transação: R$ ");
+        double valorTransacao = scanner.nextDouble();
 
-        System.out.print("Digite o score de crédito do cliente: ");
-        int score = scanner.nextInt();
-
-        if (renda > 8000 && score > 700) {
-            System.out.println("Cartão Premium aprovado!");
+        if (valorTransacao > 10000) {
+            System.out.println("Transação suspeita! Sinalizada para análise.");
         } else {
-            System.out.println("Cartão Premium recusado.");
+            System.out.println("Transação normal. Nenhuma análise necessária.");
         }
 
         scanner.close();
